@@ -1,0 +1,6 @@
+{
+  "name": "RadarSystem Admin Control App",
+  "description": "ESP32 Ultrasonic Radar System real-time admin dashboard with Firebase Realtime Database telemetry, sweep visualization, and remote hardware controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
