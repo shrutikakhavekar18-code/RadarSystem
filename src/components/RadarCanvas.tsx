@@ -350,7 +350,7 @@ export const RadarCanvas: React.FC<RadarCanvasProps> = ({
         ctx.beginPath();
         ctx.moveTo(centerX, centerY);
         ctx.lineTo(hwX, hwY);
-        ctx.strokeStyle = 'rgba(56, 189, 248, 0.85)'; // Laser Cyan distinct from green sweep
+        ctx.strokeStyle = 'rgba(245, 158, 11, 0.9)'; // Amber Gold distinct from green sweep
         ctx.lineWidth = 1.5 * dpr;
         ctx.setLineDash([4 * dpr, 4 * dpr]);
         ctx.stroke();
@@ -359,8 +359,8 @@ export const RadarCanvas: React.FC<RadarCanvasProps> = ({
         // Hardware heading reticle mark
         ctx.beginPath();
         ctx.arc(hwX, hwY, 4 * dpr, 0, Math.PI * 2);
-        ctx.fillStyle = '#38bdf8';
-        ctx.shadowColor = '#0284c7';
+        ctx.fillStyle = '#f59e0b';
+        ctx.shadowColor = '#d97706';
         ctx.shadowBlur = 8 * dpr;
         ctx.fill();
 
@@ -537,10 +537,10 @@ export const RadarCanvas: React.FC<RadarCanvasProps> = ({
             onClick={() => setShowHardwareHeading(!showHardwareHeading)}
             className={`flex items-center gap-1.5 px-2.5 py-1 rounded border text-[11px] transition-colors ${
               showHardwareHeading
-                ? 'bg-sky-950/80 text-sky-300 border-sky-600/50'
+                ? 'bg-amber-950/60 text-amber-300 border-amber-600/50'
                 : 'bg-slate-900 text-slate-500 border-slate-800'
             }`}
-            title="Toggle cyan hardware servo pointer overlay"
+            title="Toggle amber hardware servo heading pointer"
           >
             {showHardwareHeading ? <Eye className="w-3 h-3" /> : <EyeOff className="w-3 h-3" />}
             <span className="hidden sm:inline">Hardware Heading</span>
@@ -569,7 +569,7 @@ export const RadarCanvas: React.FC<RadarCanvasProps> = ({
             COORD: X={hoverCoord.x}cm, Y={hoverCoord.y}cm
           </div>
           {manualMode && (
-            <div className="text-[10px] text-sky-400 mt-0.5">Click to command servo angle</div>
+            <div className="text-[10px] text-emerald-400 mt-0.5">Click to command servo angle</div>
           )}
         </div>
       )}
@@ -594,8 +594,8 @@ export const RadarCanvas: React.FC<RadarCanvasProps> = ({
             <span className="w-2.5 h-0.5 bg-[#00ff66] inline-block shadow-[0_0_6px_#00ff66]"></span>
             Visual Sweep: 60 FPS Continuous
           </span>
-          <span className="flex items-center gap-1.5 text-sky-400">
-            <span className="w-2.5 h-0.5 bg-sky-400 inline-block border-b border-dashed border-sky-300"></span>
+          <span className="flex items-center gap-1.5 text-amber-400">
+            <span className="w-2.5 h-0.5 bg-amber-400 inline-block border-b border-dashed border-amber-300"></span>
             Reported Hardware Angle: {telemetry.servoAngle}°
           </span>
           <span className="flex items-center gap-1.5 text-rose-400">

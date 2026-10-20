@@ -35,15 +35,15 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
   const isHardwareOnline = status.online && isHeartbeatFresh;
 
   return (
-    <header className="flex items-center justify-between gap-8 px-6 py-3.5 border-b border-slate-800 bg-[#090d15] shrink-0">
+    <header className="flex items-center justify-between gap-8 px-6 py-3.5 border-b border-emerald-950/80 bg-[#080d0a] shrink-0">
       {/* Zone 1: Single text element wordmark */}
       <div className="flex items-center gap-3 whitespace-nowrap shrink-0">
-        <div className="w-8 h-8 rounded-lg bg-cyan-950 border border-cyan-500/40 flex items-center justify-center text-cyan-400">
+        <div className="w-8 h-8 rounded-lg bg-emerald-950 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
           <Radio className="w-4 h-4 animate-pulse" />
         </div>
         <div>
           <h1 className="text-base font-bold tracking-tight text-slate-100 flex items-center gap-2">
-            RadarSystem <span className="text-cyan-400 font-mono text-xs font-semibold px-1.5 py-0.5 rounded bg-cyan-950/60 border border-cyan-800/40">ADMIN // ESP32</span>
+            RadarSystem <span className="text-emerald-400 font-mono text-xs font-semibold px-1.5 py-0.5 rounded bg-emerald-950/60 border border-emerald-800/40">ADMIN // ESP32</span>
           </h1>
         </div>
       </div>
@@ -52,14 +52,14 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
       <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-400">
         <button
           onClick={onOpenFirmwareGuide}
-          className="flex items-center gap-1.5 hover:text-cyan-400 transition-colors whitespace-nowrap shrink-0"
+          className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors whitespace-nowrap shrink-0"
         >
           <BookOpen className="w-4 h-4" />
           <span>ESP32 Firmware & Wiring</span>
         </button>
         <button
           onClick={onOpenRulesGuide}
-          className="flex items-center gap-1.5 hover:text-cyan-400 transition-colors whitespace-nowrap shrink-0"
+          className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors whitespace-nowrap shrink-0"
         >
           <Settings className="w-4 h-4" />
           <span>Firebase Rules & Schema</span>
@@ -106,7 +106,7 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
           onClick={onToggleSound}
           className={`p-2 rounded border transition-colors ${
             soundEnabled
-              ? 'bg-cyan-950/60 border-cyan-800/60 text-cyan-400 hover:bg-cyan-900/60'
+              ? 'bg-emerald-950/60 border-emerald-800/60 text-emerald-400 hover:bg-emerald-900/60'
               : 'bg-slate-900 border-slate-800 text-slate-500 hover:text-slate-300'
           }`}
           title={soundEnabled ? 'Sonar sound alerts enabled' : 'Sonar sound alerts muted'}
@@ -132,7 +132,7 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
         ) : (
           <button
             onClick={onOpenAuth}
-            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-cyan-600 hover:bg-cyan-500 border border-cyan-400/40 rounded shadow-sm shadow-cyan-950 transition-colors whitespace-nowrap"
+            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-950 bg-emerald-400 hover:bg-emerald-300 border border-emerald-500 rounded shadow-sm transition-colors whitespace-nowrap"
           >
             <Shield className="w-3.5 h-3.5" />
             <span>Admin Sign In</span>

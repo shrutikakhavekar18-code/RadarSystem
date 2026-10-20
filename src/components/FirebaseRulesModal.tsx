@@ -53,11 +53,11 @@ export const FirebaseRulesModal: React.FC<FirebaseRulesModalProps> = ({ isOpen, 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-      <div className="bg-[#090d15] border border-slate-800 rounded-xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden font-mono text-xs">
+      <div className="bg-[#080d0a] border border-slate-800 rounded-xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden font-mono text-xs">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-[#0c121e]">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-[#0c140f]">
           <div className="flex items-center gap-2">
-            <Shield className="w-5 h-5 text-cyan-400" />
+            <Shield className="w-5 h-5 text-emerald-400" />
             <h2 className="text-base font-bold text-slate-100">
               Firebase Security Rules & Admin Auth Guide
             </h2>
@@ -74,7 +74,7 @@ export const FirebaseRulesModal: React.FC<FirebaseRulesModalProps> = ({ isOpen, 
         <div className="p-6 overflow-y-auto flex-1 flex flex-col gap-6 text-slate-300">
           {/* SECTION 1: AUTHENTICATION SETUP */}
           <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-2 text-cyan-400 font-bold text-sm">
+            <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm">
               <Key className="w-4 h-4" />
               <span>1. Firebase Authentication Settings (Admin Only)</span>
             </div>
@@ -83,19 +83,19 @@ export const FirebaseRulesModal: React.FC<FirebaseRulesModalProps> = ({ isOpen, 
             </p>
             <div className="bg-[#05070c] border border-slate-800 rounded-lg p-4 space-y-2 text-slate-300">
               <div className="flex items-start gap-2">
-                <span className="text-cyan-400 font-bold">Step 1:</span>
+                <span className="text-emerald-400 font-bold">Step 1:</span>
                 <span>Go to <strong className="text-slate-100">Firebase Console &gt; Authentication &gt; Sign-in method</strong>.</span>
               </div>
               <div className="flex items-start gap-2">
-                <span className="text-cyan-400 font-bold">Step 2:</span>
+                <span className="text-emerald-400 font-bold">Step 2:</span>
                 <span>Enable the <strong className="text-slate-100">Email/Password</strong> provider (leave Email Link / Passwordless disabled).</span>
               </div>
               <div className="flex items-start gap-2">
-                <span className="text-cyan-400 font-bold">Step 3:</span>
-                <span>Click the <strong className="text-slate-100">Users</strong> tab &gt; click <strong className="text-cyan-300">"Add user"</strong>.</span>
+                <span className="text-emerald-400 font-bold">Step 3:</span>
+                <span>Click the <strong className="text-slate-100">Users</strong> tab &gt; click <strong className="text-emerald-300">"Add user"</strong>.</span>
               </div>
               <div className="flex items-start gap-2">
-                <span className="text-cyan-400 font-bold">Step 4:</span>
+                <span className="text-emerald-400 font-bold">Step 4:</span>
                 <span>Enter an admin email (e.g. <code className="text-amber-300">admin@radar.local</code> or your email) and choose a secure password.</span>
               </div>
             </div>
@@ -104,13 +104,13 @@ export const FirebaseRulesModal: React.FC<FirebaseRulesModalProps> = ({ isOpen, 
           {/* SECTION 2: RTDB SECURITY RULES */}
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-cyan-400 font-bold text-sm">
+              <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm">
                 <Lock className="w-4 h-4" />
                 <span>2. Production Realtime Database Security Rules</span>
               </div>
               <button
                 onClick={() => handleCopyRules(rtdbRules)}
-                className="flex items-center gap-1.5 px-3 py-1 bg-cyan-950 hover:bg-cyan-900 border border-cyan-700/60 text-cyan-300 rounded transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1 bg-emerald-950 hover:bg-emerald-900 border border-emerald-700/60 text-emerald-300 rounded transition-colors"
               >
                 {copiedRules ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>Copy Rules JSON</span>
@@ -123,8 +123,8 @@ export const FirebaseRulesModal: React.FC<FirebaseRulesModalProps> = ({ isOpen, 
               {rtdbRules}
             </pre>
             <div className="text-[11px] text-slate-400 space-y-1">
-              <div>• <code className="text-cyan-400">telemetry</code> & <code className="text-cyan-400">status</code>: Public read, ESP32 write.</div>
-              <div>• <code className="text-cyan-400">controls</code>: Public read, restricted to authenticated admins (<code className="text-amber-300">auth != null</code>) for write.</div>
+              <div>• <code className="text-emerald-400">telemetry</code> & <code className="text-emerald-400">status</code>: Public read, ESP32 write.</div>
+              <div>• <code className="text-emerald-400">controls</code>: Public read, restricted to authenticated admins (<code className="text-amber-300">auth != null</code>) for write.</div>
             </div>
           </div>
 
@@ -144,10 +144,10 @@ export const FirebaseRulesModal: React.FC<FirebaseRulesModalProps> = ({ isOpen, 
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-3 border-t border-slate-800 bg-[#0c121e] flex justify-end">
+        <div className="px-6 py-3 border-t border-slate-800 bg-[#0c140f] flex justify-end">
           <button
             onClick={onClose}
-            className="px-4 py-1.5 text-xs font-semibold text-slate-900 bg-cyan-400 hover:bg-cyan-300 rounded transition-colors"
+            className="px-4 py-1.5 text-xs font-semibold text-slate-950 bg-emerald-400 hover:bg-emerald-300 rounded transition-colors"
           >
             Close
           </button>

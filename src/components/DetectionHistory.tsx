@@ -45,11 +45,11 @@ export const DetectionHistory: React.FC<DetectionHistoryProps> = ({
   };
 
   return (
-    <div className="bg-[#090d15] border border-slate-800 rounded-lg p-5 flex flex-col gap-4">
+    <div className="bg-[#080d0a] border border-slate-800 rounded-lg p-5 flex flex-col gap-4">
       {/* Table Header & Functional Filters */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
         <div className="flex items-center gap-2">
-          <History className="w-4 h-4 text-cyan-400" />
+          <History className="w-4 h-4 text-emerald-400" />
           <h2 className="text-sm font-bold text-slate-100 uppercase tracking-wider font-mono">
             Detection Incident Log
           </h2>
@@ -144,7 +144,7 @@ export const DetectionHistory: React.FC<DetectionHistoryProps> = ({
                   <td className="py-2 px-3 text-slate-400 whitespace-nowrap tabular-nums">
                     {new Date(ev.timestamp).toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' })}
                   </td>
-                  <td className="py-2 px-3 text-cyan-300 tabular-nums">
+                  <td className="py-2 px-3 text-emerald-400 tabular-nums">
                     {ev.angle}°
                   </td>
                   <td className="py-2 px-3 font-semibold tabular-nums">

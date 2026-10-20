@@ -238,9 +238,9 @@ void loop() {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
       <div className="bg-[#090d15] border border-slate-800 rounded-xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-[#0c121e]">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-[#0c140f]">
           <div className="flex items-center gap-2">
-            <Cpu className="w-5 h-5 text-cyan-400" />
+            <Cpu className="w-5 h-5 text-emerald-400" />
             <h2 className="text-base font-bold text-slate-100 font-mono">
               ESP32 Firmware & Hardware Integration Guide
             </h2>
@@ -259,7 +259,7 @@ void loop() {
             onClick={() => setActiveTab('firmware')}
             className={`px-3 py-2 border-b-2 font-semibold transition-colors ${
               activeTab === 'firmware'
-                ? 'border-cyan-400 text-cyan-300'
+                ? 'border-emerald-400 text-emerald-300'
                 : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -269,7 +269,7 @@ void loop() {
             onClick={() => setActiveTab('wiring')}
             className={`px-3 py-2 border-b-2 font-semibold transition-colors ${
               activeTab === 'wiring'
-                ? 'border-cyan-400 text-cyan-300'
+                ? 'border-emerald-400 text-emerald-300'
                 : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -279,7 +279,7 @@ void loop() {
             onClick={() => setActiveTab('libraries')}
             className={`px-3 py-2 border-b-2 font-semibold transition-colors ${
               activeTab === 'libraries'
-                ? 'border-cyan-400 text-cyan-300'
+                ? 'border-emerald-400 text-emerald-300'
                 : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -297,7 +297,7 @@ void loop() {
                 </span>
                 <button
                   onClick={handleCopyCode}
-                  className="flex items-center gap-1.5 px-3 py-1.5 bg-cyan-950 hover:bg-cyan-900 border border-cyan-700/60 text-cyan-300 rounded transition-colors"
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-950 hover:bg-emerald-900 border border-emerald-700/60 text-emerald-300 rounded transition-colors"
                 >
                   {copiedCode ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                   <span>{copiedCode ? 'Copied to Clipboard' : 'Copy Full Sketch'}</span>
@@ -321,7 +321,7 @@ void loop() {
 
               <div className="border border-slate-800 rounded-lg overflow-hidden">
                 <table className="w-full text-left text-xs">
-                  <thead className="bg-[#0c121e] text-slate-400 border-b border-slate-800">
+                  <thead className="bg-[#0c140f] text-slate-400 border-b border-slate-800">
                     <tr>
                       <th className="py-2.5 px-4 font-semibold">Component</th>
                       <th className="py-2.5 px-4 font-semibold">Sensor Pin</th>
@@ -331,55 +331,55 @@ void loop() {
                   </thead>
                   <tbody className="divide-y divide-slate-800/60">
                     <tr>
-                      <td className="py-2 px-4 font-semibold text-cyan-400">HC-SR04 Ultrasonic</td>
+                      <td className="py-2 px-4 font-semibold text-emerald-400">HC-SR04 Ultrasonic</td>
                       <td className="py-2 px-4">VCC</td>
                       <td className="py-2 px-4">VIN / 5V</td>
                       <td className="py-2 px-4 text-slate-400">Power from USB 5V or external 5V</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4 font-semibold text-cyan-400">HC-SR04 Ultrasonic</td>
+                      <td className="py-2 px-4 font-semibold text-emerald-400">HC-SR04 Ultrasonic</td>
                       <td className="py-2 px-4">GND</td>
                       <td className="py-2 px-4">GND</td>
                       <td className="py-2 px-4 text-slate-400">Common ground</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4 font-semibold text-cyan-400">HC-SR04 Ultrasonic</td>
+                      <td className="py-2 px-4 font-semibold text-emerald-400">HC-SR04 Ultrasonic</td>
                       <td className="py-2 px-4">TRIG</td>
                       <td className="py-2 px-4 text-amber-300 font-bold">GPIO 5</td>
                       <td className="py-2 px-4 text-slate-400">Trigger pulse output</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4 font-semibold text-cyan-400">HC-SR04 Ultrasonic</td>
+                      <td className="py-2 px-4 font-semibold text-emerald-400">HC-SR04 Ultrasonic</td>
                       <td className="py-2 px-4">ECHO</td>
                       <td className="py-2 px-4 text-amber-300 font-bold">GPIO 18</td>
                       <td className="py-2 px-4 text-slate-400">Via 1kΩ / 2kΩ divider to 3.3V</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4 font-semibold text-cyan-400">SG90 Micro Servo</td>
+                      <td className="py-2 px-4 font-semibold text-emerald-400">SG90 Micro Servo</td>
                       <td className="py-2 px-4">PWM (Orange/Yellow)</td>
                       <td className="py-2 px-4 text-amber-300 font-bold">GPIO 13</td>
                       <td className="py-2 px-4 text-slate-400">Servo control signal</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4 font-semibold text-cyan-400">SG90 Micro Servo</td>
+                      <td className="py-2 px-4 font-semibold text-emerald-400">SG90 Micro Servo</td>
                       <td className="py-2 px-4">VCC (Red)</td>
                       <td className="py-2 px-4">5V / VIN</td>
                       <td className="py-2 px-4 text-slate-400">External power recommended if servo jitters</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4 font-semibold text-cyan-400">SG90 Micro Servo</td>
+                      <td className="py-2 px-4 font-semibold text-emerald-400">SG90 Micro Servo</td>
                       <td className="py-2 px-4">GND (Brown/Black)</td>
                       <td className="py-2 px-4">GND</td>
                       <td className="py-2 px-4 text-slate-400">Common ground with ESP32</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4 font-semibold text-cyan-400">Alert LED Indicator</td>
+                      <td className="py-2 px-4 font-semibold text-emerald-400">Alert LED Indicator</td>
                       <td className="py-2 px-4">Anode (+)</td>
                       <td className="py-2 px-4 text-amber-300 font-bold">GPIO 2</td>
                       <td className="py-2 px-4 text-slate-400">Via 220Ω resistor or onboard LED</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4 font-semibold text-cyan-400">Alert LED Indicator</td>
+                      <td className="py-2 px-4 font-semibold text-emerald-400">Alert LED Indicator</td>
                       <td className="py-2 px-4">Cathode (-)</td>
                       <td className="py-2 px-4">GND</td>
                       <td className="py-2 px-4 text-slate-400">Ground</td>
@@ -395,13 +395,13 @@ void loop() {
               <h3 className="text-sm font-bold text-slate-100">Step-by-step Setup Checklist:</h3>
               <ol className="list-decimal pl-5 space-y-3 leading-relaxed">
                 <li>
-                  <strong className="text-cyan-400">Install ESP32 Board in Arduino IDE:</strong>
+                  <strong className="text-emerald-400">Install ESP32 Board in Arduino IDE:</strong>
                   <div className="text-slate-400 mt-1">
-                    Go to <code className="bg-slate-900 px-1 py-0.5 rounded">File &gt; Preferences</code>, add <code className="text-cyan-300 bg-slate-900 px-1 rounded">https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</code> to Additional Board Managers URLs. Then in <code className="bg-slate-900 px-1 py-0.5 rounded">Tools &gt; Board &gt; Boards Manager</code>, install <strong>esp32 by Espressif Systems</strong>.
+                    Go to <code className="bg-slate-900 px-1 py-0.5 rounded">File &gt; Preferences</code>, add <code className="text-emerald-300 bg-slate-900 px-1 rounded">https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</code> to Additional Board Managers URLs. Then in <code className="bg-slate-900 px-1 py-0.5 rounded">Tools &gt; Board &gt; Boards Manager</code>, install <strong>esp32 by Espressif Systems</strong>.
                   </div>
                 </li>
                 <li>
-                  <strong className="text-cyan-400">Install Required Arduino Libraries:</strong>
+                  <strong className="text-emerald-400">Install Required Arduino Libraries:</strong>
                   <div className="text-slate-400 mt-1">
                     Open <code className="bg-slate-900 px-1 py-0.5 rounded">Tools &gt; Manage Libraries...</code> and install:
                     <ul className="list-disc pl-5 mt-1 space-y-1">
@@ -411,15 +411,15 @@ void loop() {
                   </div>
                 </li>
                 <li>
-                  <strong className="text-cyan-400">Select Board & Port:</strong>
+                  <strong className="text-emerald-400">Select Board & Port:</strong>
                   <div className="text-slate-400 mt-1">
                     Select <code className="bg-slate-900 px-1 py-0.5 rounded">Tools &gt; Board &gt; ESP32 Arduino &gt; ESP32 Dev Module</code>. Set Upload Speed to 921600 or 115200 and select your COM/TTY port.
                   </div>
                 </li>
                 <li>
-                  <strong className="text-cyan-400">Update Wi-Fi & Flash:</strong>
+                  <strong className="text-emerald-400">Update Wi-Fi & Flash:</strong>
                   <div className="text-slate-400 mt-1">
-                    Paste the sketch code from the first tab, change <code className="text-cyan-300">WIFI_SSID</code> and <code className="text-cyan-300">WIFI_PASSWORD</code>, click <strong>Upload</strong>. Open the Serial Monitor at 115200 baud to verify connection!
+                    Paste the sketch code from the first tab, change <code className="text-emerald-300">WIFI_SSID</code> and <code className="text-emerald-300">WIFI_PASSWORD</code>, click <strong>Upload</strong>. Open the Serial Monitor at 115200 baud to verify connection!
                   </div>
                 </li>
               </ol>
@@ -428,10 +428,10 @@ void loop() {
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-3 border-t border-slate-800 bg-[#0c121e] flex justify-end">
+        <div className="px-6 py-3 border-t border-slate-800 bg-[#0c140f] flex justify-end">
           <button
             onClick={onClose}
-            className="px-4 py-1.5 text-xs font-semibold text-slate-900 bg-cyan-400 hover:bg-cyan-300 rounded transition-colors"
+            className="px-4 py-1.5 text-xs font-semibold text-slate-950 bg-emerald-400 hover:bg-emerald-300 rounded transition-colors"
           >
             Close Guide
           </button>
